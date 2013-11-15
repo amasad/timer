@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+
+  <head>
+    <style>
+      .component-timer path, .component-timer text {
+        fill: black;
+      }
+      .component-timer text {
+        font-size: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script charset="utf8" src="build/build.js"></script>
+    <script>
+      var Timer = require('timer');
+      var $ = require('jquery');
+
+      var timer = new Timer({
+        interval: 15,
+        outerRadius: 50,
+        onComplete: function () {
+          alert('complete');
+        }
+      });
+      $(timer).on('step', function (e, timeleft) {
+        console.log(timeleft);
+      });
+
+      $('body').append(timer.$el);
+
+      timer.start();
+    </script>
+  </body>
+
+</html>

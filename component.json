@@ -1,0 +1,17 @@
+{
+  "name": "timer",
+  "repo": "amasad/timer",
+  "description": "countdown with svg graphics",
+  "keywords": ["timer", "countdown", "stopwatch"],
+  "dependencies": {
+    "mbostock/d3": "*",
+    "component/jquery": "*"
+  },
+  "development": {},
+  "main": "timer.js",
+  "scripts": [
+    "timer.js"
+  ],
+  "license": "MIT",
+  "version": "0.0.1"
+}
